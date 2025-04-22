@@ -30,6 +30,7 @@ export const MovieListComponent = () => {
     }, [page, filteredGenres]);
     return (
         <div className={'movieList'}>
+
             <div className={'filters-wrapper'}>
                 <button className={'filters'} onClick={() => {
                     if (filterButtonsState === 'filterButtonsActive') {
@@ -38,11 +39,15 @@ export const MovieListComponent = () => {
                 }}
                 >filters
                 </button>
+
+
             </div>
+
             <div className={filterButtonsState}>
                 {
                     genres.map((genre, index) => <GenresFilterComponent key={index} genre={genre}/>)
                 }
+                <PagesButtonComponent/>
             </div>
             <div className={"movieListCards"}>
                 {(movies.length > 0) ? movies.map(movie => <MovieListCardComponent key={movie.id} movie={movie}/>) :

@@ -23,7 +23,8 @@ export const HeaderComponent = () => {
     return (
         <header>
             <div className="leftHeaderComponent">
-                <img className={"gwenHeader"} src="src/Img/gwenIcon.png" alt=""/>
+                <Link to={'/'}>
+                    <img className={"gwenHeader"} src="src/Img/gwenIcon.png" alt=""/></Link>
                 <HeaderFormComponent/>
                 <ul>
                     <li><Link to="/">Home</Link></li>
